@@ -1,0 +1,17 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  cursor: url('../images/pencil-cursor.png'), auto;
+}
+
+body {
+  font-family: $mainFontFamily, sans-serif;
+}
