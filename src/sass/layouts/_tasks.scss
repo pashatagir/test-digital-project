@@ -1,0 +1,25 @@
+.tasks {
+  @include flex(flex, space-between, null);
+  flex-direction: column;
+  gap: 60px;
+  &__list {
+    @include flex(flex, space-between, null);
+  }
+  &__item {
+    @include flex(flex, flex-start, null);
+    gap: 30px;
+  }
+  &__number {
+    font-family: $numberFontFamily;
+    @include font(900, 200px, 0.72, 0);
+    color: $decorColor;
+  }
+  &__paragraph {
+    font-family: $secondaryFontFamily;
+    @include font(400, 22px, 1.64, null);
+    width: 279px;
+  }
+  &__paragraph--width {
+    width: 420px;
+  }
+}
