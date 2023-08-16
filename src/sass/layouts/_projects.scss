@@ -1,0 +1,71 @@
+.projects__list {
+  @include flex(flex, null, null);
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.projects__title {
+  margin-bottom: 60px;
+}
+
+.projects__wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.projects__overlay {
+  @include flex(flex, center, null);
+  gap: 14px;
+  padding-left: 79px;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  color: $thirdColor;
+  background-color: rgba($color: $primaryColor, $alpha: 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: transform $mainTransitionDuration $mainTransitionTimingFunction;
+
+  .projects__item:nth-of-type(n + 3) > .projects__link > .projects__wrap > & {
+    padding-left: 14px;
+  }
+
+  .projects__link:hover &,
+  .projects__link:focus & {
+    transform: translateY(0%);
+    cursor: pointer;
+  }
+
+  &--static {
+    @include flex(flex, center, null);
+    gap: 14px;
+    padding-left: 79px;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: $thirdColor;
+    background-color: rgba($color: $primaryColor, $alpha: 0.8);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.projects__paragraph {
+  font-family: $mainFontFamily;
+  @include font(700, 64px, 1, null);
+  text-transform: uppercase;
+  max-width: 413px;
+
+  .projects__item:nth-of-type(5)
+    > .projects__link
+    > .projects__wrap
+    > .projects__overlay
+    > & {
+    font-family: $mainFontFamily;
+    @include font(700, 52px, 1, null);
+  }
+}
