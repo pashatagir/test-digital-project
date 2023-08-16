@@ -1,0 +1,36 @@
+.about {
+  background: #fbfbfb;
+  @include flex(flex, null, flex-end);
+  column-gap: 30px;
+
+  &__wrapper-images {
+    margin-top: 30px;
+    margin-left: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    position: relative;
+  }
+
+  &__images:nth-child(2) {
+    margin-top: 30px;
+  }
+
+  &__images:nth-child(3) {
+    position: absolute;
+    top: 295px;
+  }
+
+  &__wrapper-info {
+    margin-top: 30px;
+    margin-right: 70px;
+    @include flex(flex, null, flex-start);
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  &__paragraph {
+    font-family: $titleFontFamily;
+    @include font(300, 16px, 1.6, null);
+    width: 400px;
+  }
+}
