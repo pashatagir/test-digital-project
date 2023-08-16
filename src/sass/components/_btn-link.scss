@@ -1,0 +1,51 @@
+.general-button {
+  font-family: $secondaryFontFamily;
+  @include font(400, 12px, 1, 0.2em);
+  text-transform: uppercase;
+  @include flex(flex, center, center);
+  gap: 12px;
+  width: 222px;
+  height: 71px;
+  transition: text-shadow $mainTransitionDuration $mainTransitionTimingFunction;
+
+  &:hover {
+    text-shadow: 1px 1px 3px rgb(160, 159, 159), 0 0 1em rgb(158, 158, 252),
+      0 0 0.2em rgb(172, 172, 253);
+  }
+
+  &:hover .icon-arrow {
+    transform: scale(2);
+  }
+
+  &--white {
+    position: absolute;
+    bottom: 0;
+    background-color: $thirdColor;
+    color: &primaryColor;
+  }
+  &--padding {
+    background-color: $thirdColor;
+    color: &primaryColor;
+  }
+
+  &--black {
+    background-color: $primaryColor;
+    color: $thirdColor;
+    fill: $thirdColor;
+    margin-left: auto;
+  }
+  &--transparent {
+    font-family: $thirdFontFamily;
+    @include font(400, 12px, 1, 0.2em);
+    background-color: transparent;
+    color: $thirdColor;
+    fill: $thirdColor;
+  }
+
+  &--black-second {
+    background-color: $primaryColor;
+    color: $thirdColor;
+    fill: $thirdColor;
+    margin-right: auto;
+  }
+}
