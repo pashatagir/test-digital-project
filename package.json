@@ -16,8 +16,8 @@
     "webpack-dev-server": "^4.15.1"
   },
   "version": "1.0.0",
-  "description": "My webpack project",
-  "name": "my-webpack-project",
+  "description": "single-page-web-application",
+  "name": "test-digital-project",
   "scripts": {
     "build": "webpack --mode=production --node-env=production",
     "start": "webpack serve --mode=development --node-env=development"
