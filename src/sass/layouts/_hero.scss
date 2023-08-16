@@ -1,0 +1,57 @@
+.hero {
+  @include flex(flex, space-between, null);
+
+  &__wrapper--left {
+    padding-top: 336px;
+  }
+
+  &__wrapper--right {
+    position: relative;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    & > span {
+      font-family: $mainFontFamily;
+      color: $primaryColor;
+    }
+    margin-bottom: 90px;
+  }
+
+  &__btn-slider {
+    width: 53px;
+    height: 53px;
+    border: 1px solid $decorColor;
+    @include flex(flex, center, center);
+    background-color: #f9f9f9;
+    &--right {
+      transform: rotate(180deg);
+      margin-left: 23px;
+      &::after {
+        content: "";
+        display: block;
+        width: 271px;
+        height: 1px;
+        background-color: $decorColor;
+        position: absolute;
+        right: 52px;
+      }
+    }
+    &:disabled {
+      background-color: transparent;
+    }
+
+    &:hover .icon-arrow {
+      transform: scale(2);
+    }
+  }
+
+  .decor-line {
+    width: 271px;
+    height: 1px;
+  }
+  .btn-wrapper {
+    @include flex(flex, flex-start, center);
+    flex-direction: row;
+  }
+}
