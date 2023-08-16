@@ -1,12 +1,455 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="icon" href="./images/pencil-cursor-w.png" type="image/png" />
-    <title>Document</title>
+    <title>Digital Project</title>
   </head>
+
   <body>
-    <h1>hello world</h1>
+    <header class="header">
+      <div class="container">
+        <nav class="navigation">
+          <a href="#" class="navigation__logo"
+            ><svg width="70" height="44">
+              <use href="./images/symbol.svg#icon-logo"></use>
+            </svg>
+          </a>
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#" class="navigation__link navigation__link--current">Главная</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">Галерея</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">Проекты</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">Сертификаты</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <section class="hero">
+        <div class="hero__wrapper hero__wrapper--left">
+          <h1 class="title hero__title" lang="en">Project<br /><span>Home</span></h1>
+          <div class="btn-wrapper">
+            <button type="button" class="hero__btn-slider" disabled>
+              <svg width="24" height="24" class="icon-arrow">
+                <use href="./images/symbol.svg#icon-arrow"></use>
+              </svg>
+            </button>
+            <button type="button" class="hero__btn-slider hero__btn-slider--right">
+              <svg width="24" height="24" class="icon-arrow">
+                <use href="./images/symbol.svg#icon-arrow"></use>
+              </svg>
+            </button>
+            <div class="decor-line"></div>
+          </div>
+          <p></p>
+          <p></p>
+        </div>
+        <div class="hero__wrapper hero__wrapper--right">
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="./images/hero_1x.jpg 1x, ./images/hero_2x.jpg 2x, ./images/hero_3x.jpg 3x"
+              type="image/jpeg"
+            />
+            <img src="./images/hero_1x.jpg" alt="building" width="770" />
+          </picture>
+          <a href="./#" class="general-button general-button--white">
+            Взглянуть<svg width="24" height="24" class="icon-arrow">
+              <use href="./images/symbol.svg#icon-arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+      </section>
+      <section class="about reveal">
+        <div class="about__wrapper-images">
+          <picture class="about__images">
+            <source
+              media="(min-width: 1440px)"
+              srcset="
+                ./images/about-1_1x.jpg 1x,
+                ./images/about-1_2x.jpg 2x,
+                ./images/about-1_3x.jpg 3x
+              "
+              type="image/jpeg"
+            />
+            <img src="./images/about-1_1x.jpg" alt="building" width="270" />
+          </picture>
+          <picture class="about__images">
+            <source
+              media="(min-width: 1440px)"
+              srcset="
+                ./images/about-2_1x.jpg 1x,
+                ./images/about-2_2x.jpg 2x,
+                ./images/about-2_3x.jpg 3x
+              "
+              type="image/jpeg"
+            />
+            <img src="./images/about-2_1x.jpg" alt="building" width="270" />
+          </picture>
+          <picture class="about__images">
+            <source
+              media="(min-width: 1440px)"
+              srcset="
+                ./images/about-3_1x.jpg 1x,
+                ./images/about-3_2x.jpg 2x,
+                ./images/about-3_3x.jpg 3x
+              "
+              type="image/jpeg"
+            />
+            <img src="./images/about-3_1x.jpg" alt="building" width="270" />
+          </picture>
+        </div>
+        <div class="about__wrapper-info">
+          <h2 class="title">О компании</h2>
+          <p class="about__paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis tenetur amet nihil
+            praesentium quae adipisci, perferendis dolores est non, obcaecati quidem necessitatibus
+            quibusdam ratione aliquam facere nostrum! Quam eaque voluptate totam nam mollitia
+            laborum tenetur voluptates deleniti quos quo voluptatibus, voluptatum repudiandae beatae
+            possimus similique odit? Laborum praesentium sit quod.
+          </p>
+          <a href="./#" class="general-button general-button--padding">
+            Читать
+            <svg width="24" height="24" class="icon-arrow">
+              <use href="./images/symbol.svg#icon-arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+      </section>
+      <section class="tasks reveal">
+        <h2 class="title tasks__title">Основные задачи</h2>
+        <ul class="tasks__list">
+          <li class="tasks__item">
+            <span class="tasks__number">1</span>
+            <p class="tasks__paragraph">
+              Создание комфортных условий и повышение качества обслуживания клиентов
+            </p>
+          </li>
+          <li class="tasks__item">
+            <span class="tasks__number">2</span>
+            <p class="tasks__paragraph tasks__paragraph--width">
+              Постоянно совершенствовать качество предоставляемых услуг путем обучения персонала,
+              закупки нового оборудования и усиленной рекламы на рынке
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="projects reveal">
+        <h2 class="title projects__title">Наши проекты</h2>
+        <ul class="projects__list">
+          <li class="projects__item">
+            <a href="#" class="projects__link"
+              ><div class="projects__wrap">
+                <picture class="projects__images">
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="
+                      ./images/project-1_1x.jpg 1x,
+                      ./images/project-1_2x.jpg 2x,
+                      ./images/project-1_3x.jpg 3x
+                    "
+                    type="image/jpeg"
+                  />
+                  <img src="./images/project-1_1x.jpg" alt="building" width="570" />
+                </picture>
+                <div class="projects__overlay--static">
+                  <p class="projects__paragraph">Досуговый центр</p>
+                  <a href="./#" class="general-button general-button--transparent">
+                    Подробнее
+                    <svg width="24" height="24" class="icon-arrow">
+                      <use href="./images/symbol.svg#icon-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div></div
+            ></a>
+          </li>
+          <li class="projects__item">
+            <a href="#" class="projects__link"
+              ><div class="projects__wrap">
+                <picture class="projects__images">
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="
+                      ./images/project-2_1x.jpg 1x,
+                      ./images/project-2_2x.jpg 2x,
+                      ./images/project-2_3x.jpg 3x
+                    "
+                    type="image/jpeg"
+                  />
+                  <img src="./images/project-2_1x.jpg" alt="building" width="570" />
+                </picture>
+                <div class="projects__overlay">
+                  <p class="projects__paragraph">Речной порт</p>
+                  <button type="button" class="general-button general-button--transparent">
+                    Подробнее
+                    <svg width="24" height="24" class="icon-arrow">
+                      <use href="./images/symbol.svg#icon-arrow-right"></use>
+                    </svg>
+                  </button>
+                </div></div
+            ></a>
+          </li>
+          <li class="projects__item">
+            <a href="#" class="projects__link">
+              <div class="projects__wrap">
+                <picture class="projects__images">
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="
+                      ./images/project-3_1x.jpg 1x,
+                      ./images/project-3_2x.jpg 2x,
+                      ./images/project-3_3x.jpg 3x
+                    "
+                    type="image/jpeg"
+                  />
+                  <img src="./images/project-3_1x.jpg" alt="building" width="270" />
+                </picture>
+                <div class="projects__overlay">
+                  <p class="projects__paragraph">Ферма</p>
+                  <button type="button" class="general-button general-button--transparent">
+                    Подробнее
+                    <svg width="24" height="24" class="icon-arrow">
+                      <use href="./images/symbol.svg#icon-arrow-right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="projects__item">
+            <a href="#" class="projects__link"
+              ><div class="projects__wrap">
+                <picture class="projects__images">
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="
+                      ./images/project-4_1x.jpg 1x,
+                      ./images/project-4_2x.jpg 2x,
+                      ./images/project-4_3x.jpg 3x
+                    "
+                    type="image/jpeg"
+                  />
+                  <img src="./images/project-4_1x.jpg" alt="building" width="470" />
+                </picture>
+                <div class="projects__overlay">
+                  <p class="projects__paragraph">Жк "Ривьера"</p>
+                  <button type="button" class="general-button general-button--transparent">
+                    Подробнее
+                    <svg width="24" height="24" class="icon-arrow">
+                      <use href="./images/symbol.svg#icon-arrow-right"></use>
+                    </svg>
+                  </button>
+                </div></div
+            ></a>
+          </li>
+          <li class="projects__item">
+            <a href="#" class="projects__link"
+              ><div class="projects__wrap">
+                <picture class="projects__images">
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="
+                      ./images/project-5_1x.jpg 1x,
+                      ./images/project-5_2x.jpg 2x,
+                      ./images/project-5_3x.jpg 3x
+                    "
+                    type="image/jpeg"
+                  />
+                  <img src="./images/project-5_1x.jpg" alt="building" width="370" />
+                </picture>
+                <div class="projects__overlay">
+                  <p class="projects__paragraph">Космопорт</p>
+                  <a href="./#" class="general-button general-button--transparent">
+                    Подробнее
+                    <svg width="24" height="24" class="icon-arrow">
+                      <use href="./images/symbol.svg#icon-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div></div
+            ></a>
+          </li>
+        </ul>
+        <a href="./#" class="general-button general-button--black">
+          Все проекты
+          <svg width="24" height="24" class="icon-arrow">
+            <use href="./images/symbol.svg#icon-arrow-right"></use>
+          </svg>
+        </a>
+      </section>
+      <section class="contact reveal">
+        <h2 class="title contact__title">Связаться с нами</h2>
+        <div class="contact__wrap">
+          <form class="form contact__form">
+            <label class="form__label" for="name">Имя</label
+            ><input type="text" class="form__input" name="name" id="name" placeholder=" " />
+            <label class="form__label" for="tel">Номер телефона<span>*</span></label
+            ><input type="tel" class="form__input" name="tel" id="tel" />
+            <label class="form__label" for="mail">E-mail<span>*</span></label
+            ><input type="mail" class="form__input" name="mail" id="mail" />
+            <label class="form__label" for="product">Интересующий товар/услуга</label
+            ><input type="text" class="form__input" name="product" id="product" />
+            <label class="form__label" for="message" class="form__label"
+              >Сообщение<span>*</span></label
+            >
+            <textarea
+              name="message"
+              id="message"
+              rows="10"
+              class="form__input form__input--height"
+            ></textarea>
+            <label class="check">
+              <input type="checkbox" name="consent" class="check__input" /><span class="check__span"
+                ><svg class="check__icon" width="12" height="9">
+                  <use href="./images/symbol.svg#icon-l"></use></svg
+              ></span>
+              Отправляя заявку Вы соглашаетесь с политикой конфиденциальности
+            </label>
+            <button type="submit" class="general-button general-button--black-second">
+              Отправить
+              <svg width="24" height="24" class="icon-arrow">
+                <use href="./images/symbol.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </form>
+          <picture class="contact__images">
+            <source
+              media="(min-width: 1440px)"
+              srcset="
+                ./images/contact-with-us_1x.jpg 1x,
+                ./images/contact-with-us_2x.jpg 2x,
+                ./images/contact-with-us_3x.jpg 3x
+              "
+              type="image/jpeg"
+            />
+            <img src="./images/contact-with-us_1x.jpg" alt="building" width="749" />
+          </picture>
+        </div>
+      </section>
+    </main>
+    <footer class="reveal">
+      <div class="container footer">
+        <div class="footer__wrap">
+          <a href="#" class="footer__link"
+            ><svg class="footer__logo" width="145" height="94">
+              <use href="./images/symbol.svg#icon-logo"></use>
+            </svg>
+          </a>
+          <nav class="footer-navigation">
+            <p class="footer-navigation__paragraph">Информация</p>
+            <ul class="footer-navigation__list">
+              <li class="footer-navigation__item">
+                <a href="#" class="footer-navigation__link">Главная</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a href="#" class="footer-navigation__link">Галерея</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a href="#" class="footer-navigation__link">Проекты</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a href="#" class="footer-navigation__link">Сертификаты</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a href="#" class="footer-navigation__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="address">
+            <p class="address__paragraph">Контакты</p>
+            <ul class="address__list">
+              <li class="address__item">
+                <a
+                  href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80+%D0%9B%D0%B5%D1%81%D1%96+%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D1%97%D0%B2,+02000/@50.4265807,30.5383858,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="address__link"
+                >
+                  100000, Республика Казахстан, <br />г. Караганда, ул. Телевизионная 10
+                  <svg width="21" height="26">
+                    <use href="./images/symbol.svg#icon-location"></use></svg
+                ></a>
+              </li>
+              <li class="address__item">
+                <a href="tel:+380000000000" class="address__link">
+                  +38 (000) 000 00 00<svg width="16" height="16">
+                    <use href="./images/symbol.svg#icon-phone"></use></svg
+                ></a>
+              </li>
+              <li class="address__item">
+                <a href="mailto:mail@gmail.com" lang="en" class="address__link"
+                  >mail@gmail.com<svg width="16" height="11">
+                    <use href="./images/symbol.svg#icon-mail"></use></svg
+                ></a>
+              </li>
+            </ul>
+          </address>
+          <div class="social">
+            <p class="social__paragraph">Социальные сети</p>
+            <ul class="social__list">
+              <li class="social__item">
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="social__link"
+                  ><svg class="social__icon" width="10" height="19">
+                    <use class="social__icon" href="./images/symbol.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="social__link"
+                  ><svg class="social__icon" width="22" height="17">
+                    <use class="social__icon" href="./images/symbol.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="https://linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="social__link"
+                  ><svg class="social__icon" width="20" height="20">
+                    <use class="social__icon" href="./images/symbol.svg#icon-linked-in"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="https://www.pinterest.com/"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="social__link"
+                  ><svg class="social__icon" width="14" height="19">
+                    <use class="social__icon" href="./images/symbol.svg#icon-pininterest"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyrite">
+          <p>&copy 2019 Digital Project. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
