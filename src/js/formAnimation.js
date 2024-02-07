@@ -1,21 +1,20 @@
-const elemLabel = document.querySelectorAll(".form__label");
-const elemInput = document.querySelectorAll(".form__input");
+const inputElements = document.querySelectorAll('.form__input');
+const associatedLabel = e => document.querySelector(`[for="${e.target.id}"]`);
 
-elemInput.forEach((input) => {
-  input.addEventListener("focus", (e) => {
-    elemLabel.forEach((label) => {
-      if (label.classList.contains("position")) {
-        label.classList.remove("position");
-      }
-      label.classList.add("position");
-    });
+inputElements.forEach(input => {
+  input.addEventListener('focus', e => {
+    if (associatedLabel(e)) {
+      associatedLabel(e).classList.add('position');
+    }
   });
-});
 
-elemInput.forEach((input) => {
-  input.addEventListener("blur", () => {
-    elemLabel.forEach((label) => {
-      label.classList.remove("position");
-    });
+  input.addEventListener('blur', e => {
+    if (input.value !== '') {
+      return;
+    }
+
+    if (associatedLabel(e)) {
+      associatedLabel(e).classList.remove('position');
+    }
   });
 });
